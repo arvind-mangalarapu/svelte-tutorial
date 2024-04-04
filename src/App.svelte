@@ -117,16 +117,14 @@
         import Decrement from "./components/Decrement.svelte";
         import Reset from "./components/Reset.svelte";
 
-
+      import Timer from "./components/Timer.svelte";
+    
     </script>
     
-    
-    
-        <main >	
 
 
-       
-            <h1>hello {name} !</h1> 
+            <main>	
+                <h1>hello {name} !</h1> 
                      
                              <h3>App component global styles</h3>
                              <h4>App component Text</h4>
@@ -181,7 +179,7 @@
                              <h2>this is not a number</h2>
                          {/if}
                      
-                         <!-- for each -->
+                         
                      
                          {#each fullName as name,index}
                          <h2>{index+ 1 } {name.first} {name.last}</h2>
@@ -192,14 +190,14 @@
                          <h2>{index+ 1 } {name}</h2>
                          {/each}
                      
-                         <!-- change count -->
+                        
                      <button on:click ={()=>count = count +1}>Count {count}</button>
                      <button on:click={ (event) =>handleClick(event,5)}>count{count}</button>
                      <button on:click={ (event) =>handleClick(event,10)}>count{count}</button>
                      
                          <div>
-                    <pre class="text-white">
-                        {JSON.stringify(formValues,null,4)}
+                    <pre>
+                        <code>{JSON.stringify(formValues,null,2)}</code>
                     </pre>
                              </div>
                              <form on:submit={submitForm}>
@@ -318,87 +316,19 @@
                     {/if} 
                 
                         <AutoFous/> 
-                <PostList/> 
-             </main>
+                <PostList/>
     
+                <Timer/>
+                <Increment/>
+                <Decrement/>
+                <Reset/>
+               <Display/>
+           
+
+
+            </main>
+             
     
-    <style>
-    
-    :global(h3) {
-        color: aqua;
-    }
-        h4{
-            color:orange;
-            font-size: 50px;
-    
-        }
-        input +label {
-            display: inline-flex;
-            color: aliceblue;
-    
-        }
-    
-        :global(main) {
-            text-align: center; 
-            padding: 1em;
-            max-width: 240px;
-            margin: 0 auto;
-            height: 100vh;
-        
-        }
-        #heading {
-            color:paleturquoise;
-            font-size: 5em;
-        }
-    
-        .danger{
-            color:red;
-            font-size: 5em;
-        }
-        .success{
-            color:green;
-            font-size: 5em;
-        }
-        .promoted{
-            font-style: italic;
-            font-size: 10em;
-            color:greenYellow;
-        }
-        p{
-            font-size: 3em;
-            color: aqua;
-        }
-    
-        h1 {
-            color: #ff3e00;
-            text-transform: capitalize;
-            font-size: 10em;
-            font-weight: 100;
-        }
-        :global(h2){
-            color:rgb(196, 121, 28);
-            text-transform: capitalize;
-            font-size: 50px;
-            font-weight: 100;
-        }
-        :global(button){
-            background-color:rgb(225, 186, 15);
-            color: rgb(200, 47, 47);
-            border: 2px solid firebrick ;
-            font-size: 2rem;
-            padding: 20px 40px;
-        }
-        img{
-    
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 0 auto;
-        }
-    
-        @media (min-width: 640px) {
-            main {
-                max-width: none;
-            }
-        }
-    </style>
+            <style global>
+                @import '../public/global.css';
+           </style>

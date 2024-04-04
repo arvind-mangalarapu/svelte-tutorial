@@ -2,7 +2,7 @@
 
 
 
-<style>
+<!-- <style>
     	button{
 		background-color:greenyellow;
 		color: darkred;
@@ -10,4 +10,4 @@
 		font-size: 2em;
 		padding: 20px  40px;
 	}
-</style>
+</style> -->

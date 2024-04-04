@@ -16,7 +16,7 @@
 
 {#each posts as post (post.id)}
 
-<h3 class="text-3xl my-10">{post.id}. {post.title}</h3> 
+   <h2 class="text-3xl my-10">{post.id}. {post.title}</h2> 
     <p class="text-white">{post.body}</p>
     <hr />
 {/each}

@@ -14,7 +14,7 @@
 
 
 
-<style>
+<!-- <style>
     
     .card{
         box-shadow: 0.4px 5px 1px rgb(255, 255, 255);
@@ -33,4 +33,4 @@
      }
 
     
-</style>
+</style> -->
